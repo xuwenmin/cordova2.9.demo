@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <title>建立个人信息</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0,minimum-scale=1.0,maximum-scale=1.0">
+    <link rel="stylesheet" href="css/base.css">
+    <style>
+
+        .content .linediv{
+            content: "\\0020";
+            padding: 1px;
+            margin-top: 25px;
+            background-color:#d6d6d6 ;
+        }
+        .content .buttondiv{
+            position: relative;
+            margin: 10px 30px;
+            background-color: #f0f0f0;
+            border: 1px solid #d6d6d6 ;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .content .buttondiv a{
+            text-decoration: none;
+            color: #333333;
+            font-weight: bold;
+        }
+        .content .buttondiv img{
+            position: absolute;
+            top: 12px;
+            right: 10px;
+        }
+        .content .bigdescinfo{
+            width:90%;
+            margin: 20px 5%;
+        }
+        .content .bigdescinfo input{
+            display: inline-block;
+            width: 100%;
+            height: 40px;
+            border-radius: 5px;
+            border: 1px solid #d6d6d6;
+            font-size: 0.8em;
+            line-height: 1em;
+            font-weight: bold;
+            margin: 10px auto;
+            background-color:#F5F5F5 ;
+        }
+        .content .bigdescinfo input:focus{
+            outline: none;
+            border: 2px solid rgb(123,176,207);
+            transition:border linear .2s,box-shadow linear .5s;
+            box-shadow:0 0 8px rgba(123,176,207,1);
+        }
+
+        .content .bigdescinfo input.short1{
+            width:55%;
+        }
+        .content .bigdescinfo input.short2{
+            width:20%;
+        }
+        .content .bigdescinfo input.short3{
+            width:53%;
+        }
+        .content .bigdescinfo .list_img{
+            display: inline-block;
+            width:40%;
+            height: 15px;
+            font-size: 0.8em;
+
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="headinfo">
+        <h1>建立个人信息</h1>
+    </div>
+</div>
+<div class="content contentex">
+    <div class="bigdescinfo">
+       <input type="text" placeholder="真实姓名" class="short1" >
+        <div class="list_img" >
+            <div class="qmsilder">
+                <div class="silderleft" ><a href="#">先生</a></div>
+                <div class="silder silder_r" ><a href="#">女士</a></div>
+                <div class="silderright hide"><a href="#">女士</a></div>
+            </div>
+        </div>
+        <input type="text" placeholder="职务" >
+        <input type="text" placeholder="手机号码" >
+        <input type="text" class="short2"  placeholder="区号" >-<input class="short3" >-<input class="short2"  type="text" placeholder="分机号">
+        <input type="text" placeholder="Email" >
+    </div>
+
+    <div class="clear"></div>
+    <div class="linediv"></div>
+    <div class="buttondiv">
+        <a href="#" class="aendtoover">最后一步</a>
+        <img src="images/tou2/2_6.png">
+    </div>
+</div>
+<div class="clear"></div>
+
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/underscore-min.js"></script>
+<script type="text/javascript" src="js/rda.js"></script>
+</body>
+</html>

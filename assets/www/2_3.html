@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>所有投资项目</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0,minimum-scale=1.0,maximum-scale=1.0">
+    <link rel="stylesheet" href="css/base.css">
+    <style>
+        .qm_info{
+            background-color:#e6e6e6;
+            height: auto;
+            max-width: 100%;
+            border: 1px solid #1B52A5;
+            padding: 5px;
+            border-radius: 5px;
+            display: none;
+        }
+        .qm_info ul{
+            list-style: none;
+            display: inline-block;
+            margin: 0; padding: 0;
+            padding:5px;
+            width: 98%;
+        }
+        .qm_info ul li{
+            margin-bottom: 5px;
+        }
+        .qm_info ul li:hover{
+            background-color: #1B52A5;
+            color: #ffffff;
+        }
+        .qm_search{
+            position: absolute;
+            top:8px;right: 4px;
+        }
+        .qm_search img{
+            width:40px;
+            height: 40px;
+        }
+        .autofind{
+            max-width: 100%;
+            margin-top: 10px;
+            padding:0 5px 0 2px;
+        }
+        .autofind input{
+            max-width: 100%;
+            width: 100%;
+            line-height: 30px;
+            height: 40px;
+            border: 2px solid #d6d6d6;
+            border-radius: 10px;
+            font-size: 30px;
+            outline: none;
+
+        }
+        .autofind input:focus{
+            transition:border linear .2s,box-shadow linear .5s;
+            outline:none;
+            border-color:rgba(27,82,165,.75);
+            box-shadow:0 0 8px rgba(27,82,100,.5);
+        }
+        .qm_content{
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="headinfo">
+        <h1>所有投资项目</h1>
+    </div>
+    <div class="lefticon">
+        <img src="images/tou2/2_8.png" id="left2_1" />
+    </div>
+    <div class="righticon">
+        <img src="images/tou2/2_9.png" class="find2_1" />
+    </div>
+</div>
+<div class="bubble"><ul>
+    <li><a href="#">已监控</a></li>
+    <li><a href="#">未监控</a></li>
+</ul></div>
+<div class="qm_content content">
+    <div class="autofind">
+        <input id="findabc" >
+    </div>
+    <div class="qm_search">
+        <img class="qm_search" src="images/tiao/find.png">
+    </div>
+    <div class="qm_info" id="qm_info">
+        <ul>
+            <li>xuwm</li>
+            <li>admin</li>
+        </ul>
+    </div>
+</div>
+
+<div class="footer">
+  <div class="bottominfo">
+      <div class="bottomimg">
+          <img src="images/home_h.png">
+      </div>
+      <a href="#">首页</a>
+  </div>
+  <div class="bottominfo activebottom">
+      <div class="bottomimg">
+          <img src="images/mypro_w.png">
+      </div>
+      <a href="#">我的项目</a>
+  </div>
+    <div class="bottominfo">
+        <div class="bottomimg">
+            <img src="images/findpro_h.png">
+        </div>
+        <a href="#">挑选项目</a>
+    </div>
+    <div class="bottominfo">
+        <div class="bottomimg">
+            <img src="images/userinfo_h.png">
+        </div>
+        <a href="#">账户设置</a>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/underscore-min.js"></script>
+<script type="text/javascript" src="js/rda.js"></script>
+</body>
+</html>

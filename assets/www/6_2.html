@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>填报企业情况</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0,minimum-scale=1.0,maximum-scale=1.0">
+    <link rel="stylesheet" href="css/base.css">
+    <style>
+
+        .content .linediv{
+           content: "\\0020";
+           padding: 1px;
+           margin-top: 50px;
+           background-color:#d6d6d6 ;
+        }
+        .content .buttondiv{
+            position: relative;
+            margin: 10px 30px;
+            background-color: #f0f0f0;
+            border: 1px solid #d6d6d6 ;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .content .buttondiv a{
+            text-decoration: none;
+            color: #333333;
+            font-weight: bold;
+        }
+        .content .buttondiv img{
+            position: absolute;
+            top: 12px;
+            right: 10px;
+        }
+
+        .content .bigdescinfo{
+            clear: both;
+            padding-top: 5px;
+        }
+        .content .bigdescinfo ul{
+            list-style: none;
+        }
+        .content .bigdescinfo ul li{
+            display: block;
+            margin-top: 10px;
+        }
+        .content .bigdescinfo ul li label{
+            float: left;
+            padding-top: 10px;
+        }
+        .content .bigdescinfo ul li div{
+            float: left;
+            padding-left: 10px;
+            padding-top: 10px;
+            width: 60%;
+        }
+        .content .bigdescinfo ul li div .short1{
+            background-color: #F5F5F5;
+            border: 1px solid #d6d6d6;
+            height: 30px;
+            width: 20%;
+        }
+        .content .bigdescinfo ul li div .short2{
+            background-color: #F5F5F5;
+            border: 1px solid #d6d6d6;
+            height: 30px;
+            width: 50.5%;
+        }
+        .content .bigdescinfo ul li div input:focus{
+            outline: none;
+            border: 2px solid rgb(123,176,207);
+            transition:border linear .2s,box-shadow linear .5s;
+            box-shadow:0 0 8px rgba(123,176,207,1);
+        }
+        .content .bigdescinfo ul li label:first-child{
+            color: #666666;
+            font-weight: bold;
+            width: 30%;
+            text-align: right;
+        }
+        .content .bigdescinfo ul li label:last-child.all{
+            color: #656565;
+            font-weight: bold;
+            width:60%;
+            padding-left: 10px;
+        }
+        .content .bigdescinfo ul li label input.longtxt{
+            width: 100%;
+            background-color: #F5F5F5;
+            border: 1px solid #d6d6d6;
+            height: 30px;
+        }
+        .content .bigdescinfo ul li label.short1{
+            width: 20%;
+
+        }
+        .content .bigdescinfo ul li label.short2{
+            width: 20%;
+        }
+        .content .bigdescinfo ul li label input.longtxt:focus{
+            outline: none;
+            border: 2px solid rgb(123,176,207);
+            transition:border linear .2s,box-shadow linear .5s;
+            box-shadow:0 0 8px rgba(123,176,207,1);
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="headinfo">
+        <h1>填报企业情况</h1>
+    </div>
+    <div class="lefticon">
+        <img src="images/tou2/2_10.png" id="left2_1" class="find6_1" />
+    </div>
+</div>
+<div class="content">
+    <div class="bigdescinfo">
+        <ul>
+            <li><label>企业名称:</label><label class="all"><input type="text" class="longtxt"></label></li>
+            <li><label>联系人:</label><label class="all"><input type="text" class="longtxt"></label></li>
+            <li><label>手机号码:</label><label class="all"><input type="text" class="longtxt"></label></li>
+            <li><label>座机号码:</label>
+                <div>
+                    <input placeholder="区号" class="short1" type="text">-<input  class="short2" type="text">-<input placeholder="分机" class="short1" type="text">
+                </div>
+            </li>
+            <li><label>Email:</label><label class="all"><input type="text" class="longtxt"></label></li>
+        </ul>
+    </div>
+    <div class="clear"></div>
+    <div class="linediv"></div>
+    <div class="buttondiv">
+        <a href="#" class="a62next">下一步</a>
+        <img src="images/tou2/2_6.png">
+    </div>
+</div>
+
+<div class="footer">
+    <div class="bottominfo">
+        <div class="bottomimg">
+            <img src="images/home_h.png">
+        </div>
+        <a href="#">首页</a>
+    </div>
+    <div class="bottominfo activebottom">
+        <div class="bottomimg">
+            <img src="images/mypro_w.png">
+        </div>
+        <a href="#">我的项目</a>
+    </div>
+    <div class="bottominfo">
+        <div class="bottomimg">
+            <img src="images/findpro_h.png">
+        </div>
+        <a href="#">挑选项目</a>
+    </div>
+    <div class="bottominfo">
+        <div class="bottomimg">
+            <img src="images/userinfo_h.png">
+        </div>
+        <a href="#">账户设置</a>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/underscore-min.js"></script>
+<script type="text/javascript" src="js/rda.js"></script>
+</body>
+</html>
