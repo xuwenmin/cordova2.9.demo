@@ -33,7 +33,7 @@
     <access origin="*"/>
 
     <!-- <content src="http://mysite.com/myapp.html" /> for external pages -->
-    <content src="1_1_ios.html" />
+    <content src="1_1.html" />
    
     <preference name="loglevel" value="DEBUG" />
      <preference name="disallowOverscroll" value="true" />

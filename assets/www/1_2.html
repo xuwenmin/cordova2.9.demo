@@ -15,32 +15,73 @@
             width: 100%;
             text-align: center;
         }
-        .content_left{
+        .content_footer{
+            position: relative;
+            max-width: 100%;
+            height: 67%;
+            padding-top:10px;
+        }
+        .content_footer .left{
+            position: relative;
+            display: inline-block;
+            float:left;
+            background-color: #1b52a5;
+            margin-left: 10px;
+            margin-top:5px;
+            min-width: 46%;
+            height: 30%;
+            text-align: center;
+        }
+        .content_footer .left:first-child{
+            background-color: #0f3c80;
+        }
+        .content_footer .right{
+            position: relative;
+            display: inline-block;
+            float:right;
+            background-color: #1b52a5;
+            margin-right: 10px;
+            margin-left:5px;
+            margin-top: 5px;
+            min-width: 46%;
+            height: 30%;
+        }
+        .content_footer a{
+            font-size: 0.8em;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .content_footer  .top{
+            text-align: left;
+            width: 100%;
             float: left;
-            width:50%;
+            margin-left:5px;
             margin-top: 5px;
         }
-        .indexgo{
-            padding: 0px 0px;
+        .content_footer  .center{
+            position: absolute;
+            top:30%;
+            left: 39%;
         }
-        .content_left img{
-            max-width: 100%;
-            height: 90px;
-
-        }
-        .content_right{
-            float: right;
-            width:50%;
-            margin-top:5px;
-        }
-        .content_right img{
-            max-width: 100%;
-            height: 90px;
+        .content_footer  .bottom{
+            position: absolute;
+            bottom:5px;
+            right: 5px;
         }
         @media  screen and (max-width:380px) {
-            #imglogin{
-               width: 100px;
-               height: 70px;
+            .content_footer .left{
+
+            }
+            .content_footer  .right{
+
+            }
+        }
+        @media  screen and (min-width:380px) {
+            .content_footer .left{
+                height: 33%;
+            }
+            .content_footer  .right{
+                height: 33%;
             }
         }
     </style>
@@ -57,30 +98,89 @@
    <div  class="content_info">
        <img src="images/login/login4.png" id="imgbg1">
    </div>
-   <div class="content_info indexgo">
-      <div class="content_left">
-          <img src="images/login/login5.png">
-      </div>
-      <div class="content_right">
-          <img src="images/login/login6.gif">
-      </div>
-   </div>
-   <div  class="content_info indexgo" >
-       <div class="content_left">
-           <img src="images/login/login7.gif">
-       </div>
-       <div class="content_right">
-           <img src="images/login/login8.gif">
-       </div>
-   </div>
-   <div  class="content_info indexgo" >
-       <div class="content_left">
-           <img src="images/login/login9.gif">
-       </div>
-       <div class="content_right">
-           <img src="images/login/login10.png">
-       </div>
-   </div>
+
+<div class="content_footer">
+    <div class="left">
+        <div class="top">
+            <a>所有投资项目</a>
+        </div>
+
+        <div class="center">
+            <img src="images/1/1.png">
+        </div>
+        <div class="bottom">
+            <a>0</a>
+        </div>
+
+    </div>
+    <div class="right">
+        <div class="top">
+            <a>RDA监控项目</a>
+        </div>
+
+        <div class="center">
+            <img src="images/1/2.png">
+        </div>
+        <div class="bottom">
+            <a>0</a>
+        </div>
+
+    </div>
+
+    <div class="left">
+        <div class="top">
+            <a>挑选投资项目</a>
+        </div>
+
+        <div class="center">
+            <img src="images/1/3.png">
+        </div>
+        <div class="bottom">
+            <a>0</a>
+        </div>
+
+    </div>
+    <div class="right">
+        <div class="top">
+            <a>RDA监控预警</a>
+        </div>
+
+        <div class="center">
+            <img src="images/1/4.png">
+        </div>
+        <div class="bottom">
+            <a>0</a>
+        </div>
+
+    </div>
+
+    <div class="left">
+        <div class="top">
+            <a>新建投资项目</a>
+        </div>
+
+        <div class="center">
+            <img src="images/1/5.png">
+        </div>
+        <div class="bottom">
+            <a>0</a>
+        </div>
+
+    </div>
+    <div class="right">
+        <div class="top">
+            <a>委托RDA监控</a>
+        </div>
+
+        <div class="center">
+            <img src="images/1/6.png">
+        </div>
+        <div class="bottom">
+            <a>0</a>
+        </div>
+
+    </div>
+</div>
    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
    <script type="text/javascript" src="js/underscore-min.js"></script>
    <script type="text/javascript" src="js/rda.js"></script>

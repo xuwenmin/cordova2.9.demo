@@ -2,58 +2,208 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>测试phonegap应用</title>
+    <title>所有投资项目</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0,minimum-scale=1.0,maximum-scale=1.0">
+    <link rel="stylesheet" href="css/base.css">
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="js/cordova.js"></script>
-	<style type="text/css">
-        html{height:100%;}
-        body{height:100%;background-color:rgb(128,128,128);}
-        #container{
-            min-height:100%;
-            width:640px;
-            margin:auto;
-            background-color:white;
-        }
-        #header{
-            position:fixed;
-            top:0;
-            width:640px;
-            margin:auto;
-            background-color:blue;
-            color:white;
-            height:25px;
-            line-height:25px;
-            vertical-align:middle;
-        }
-        #body{
-            width:100%;
-            padding:25px 1em;
-        }
-        #footer{
-            position:fixed;
-            bottom:0;
-            width:640px;
-            margin:auto;
-            background-color:silver;
-            height:25px;
-            line-height:25px;
-            vertical-align:middle;
-        }
-	</style>
-    <script type="text/javascript">
-         $(function(){
-             var File=require("cordova/plugin/FileReader");
-             var _f=new File();
-             alert(_f.readAsText("1_1.html","utf-8"));
-         });
-    </script>
-</head>	
-	<body>
-            <div class="header"></div>
-            <div class="container"></div>
-            <div class="footer"></div>
-		
-	</body>
+    <script type="text/javascript" src="js/underscore-min.js"></script>
+    <script type="text/javascript" src="js/backbone.js"></script>
+    <script type="text/javascript" src="js/iscroll.js"></script>
+    <script type="text/javascript" src="js/rda.js"></script>
 
+    <style>
+        .content .content_list ul li .list_img img{
+            width:45px;
+            height: 15px;
+        }
+        a{
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+           <div class="header">
+               <div class="headinfo">
+                   <h1>所有投资项目</h1>
+               </div>
+               <div class="lefticon">
+                   <img src="images/tou2/2_8.png" id="left2_1" />
+               </div>
+               <div class="righticon">
+                   <img src="images/tou2/2_9.png" class="find2_1" />
+               </div>
+           </div>
+           <div class="bubble"><ul>
+               <li><a href="#">已监控</a></li>
+               <li><a href="#">未监控</a></li>
+           </ul></div>
+           <div id="wrapper" class="content">
+	           <div>
+	               <div class="descinfo">
+	                   <ul>
+	                       <li>
+	                           <span>我的投资项目:</span><span>11</span><span>个</span>
+	                       </li>
+	                       <li>
+	                           <span>RDA监控项目:</span><span>11</span><span>个</span>
+	                       </li>
+	                   </ul>
+	               </div>
+	               <div class="content_list list2_1">
+	
+	                   <ul>
+	                       <li>
+	                           <div class="list_desc" >
+	                               <h1>吉林计算机软件保护系统产业化项目</h1>
+	                               <a href="#">企业基本信息</a>
+	                           </div>
+	                           <div class="list_img" >
+	                               <img src="images/tou2/2_7.png" >
+	                           </div>
+	
+	                       </li>
+	                       <li>
+	                           <div class="list_desc" >
+	                               <h1>吉林计算机软件保护系统产业化项目</h1>
+	                               <a href="#">企业基本信息</a>
+	                           </div>
+	                           <div class="list_img" >
+	                               <img src="images/tou2/2_7.png" >
+	                           </div>
+	
+	                       </li>
+	                       <li>
+	                           <div class="list_desc" >
+	                               <h1>吉林计算机软件保护系统产业化项目</h1>
+	                               <a href="#">企业基本信息</a>
+	                           </div>
+	                           <div class="list_img" >
+	                               <img src="images/tou2/2_7.png" >
+	                           </div>
+	
+	                       </li>
+	                       <li>
+	                           <div class="list_desc" >
+	                               <h1>吉林计算机软件保护系统产业化项目</h1>
+	                               <a href="#">企业基本信息</a>
+	                           </div>
+	                           <div class="list_img" >
+	                               <img src="images/tou2/2_7.png" >
+	                           </div>
+	
+	                       </li>
+	                       <li>
+	                           <div class="list_desc" >
+	                               <h1>吉林计算机软件保护系统产业化项目</h1>
+	                               <a href="#">企业基本信息</a>
+	                           </div>
+	                           <div class="list_img" >
+	                               <img src="images/tou2/2_7.png" >
+	                           </div>
+	
+	                       </li>
+	                       <li>
+	                           <div class="list_desc" >
+	                               <h1>吉林计算机软件保护系统产业化项目</h1>
+	                               <a href="#">企业基本信息</a>
+	                           </div>
+	                           <div class="list_img" >
+	                               <img src="images/tou2/2_7.png" >
+	                           </div>
+	
+	                       </li>
+	                       <li>
+	                           <div class="list_desc" >
+	                               <h1>吉林计算机软件保护系统产业化项目</h1>
+	                               <a href="#">企业基本信息</a>
+	                           </div>
+	                           <div class="list_img" >
+	                               <img src="images/tou2/2_7.png" >
+	                           </div>
+	
+	                       </li>
+	                       <li>
+	                           <div class="list_desc" >
+	                               <h1>吉林计算机软件保护系统产业化项目</h1>
+	                               <a href="#">企业基本信息</a>
+	                           </div>
+	                           <div class="list_img" >
+	                               <img src="images/tou2/2_7.png" >
+	                           </div>
+	
+	                       </li>
+	                       <li>
+	                           <div class="list_desc" >
+	                               <h1>吉林计算机软件保护系统产业化项目</h1>
+	                               <a href="#">企业基本信息</a>
+	                           </div>
+	                           <div class="list_img" >
+	                               <img src="images/tou2/2_7.png" >
+	                           </div>
+	
+	                       </li>
+	                       <li>
+	                           <div class="list_desc" >
+	                               <h1>吉林计算机软件保护系统产业化项目</h1>
+	                               <a href="#">企业基本信息</a>
+	                           </div>
+	                           <div class="list_img" >
+	                               <img src="images/tou2/2_7.png" >
+	                           </div>
+	
+	                       </li>
+	                       <li>
+	                           <div class="list_desc" >
+	                               <h1>吉林计算机软件保护系统产业化项目</h1>
+	                               <a href="#">企业基本信息</a>
+	                           </div>
+	                           <div class="list_img" >
+	                               <img src="images/tou2/2_7.png" >
+	                           </div>
+	
+	                       </li>
+	                       <li>
+	                           <div class="list_desc" >
+	                               <h1>吉林计算机软件保护系统产业化项目</h1>
+	                               <a href="#">企业基本信息</a>
+	                           </div>
+	                           <div class="list_img" >
+	                               <img src="images/tou2/2_7.png" >
+	                           </div>
+	
+	                       </li>
+	
+	                   </ul>
+	               </div>
+	           </div>
+           </div>
+           <div class="footer">
+           <div class="bottominfo">
+               <div class="bottomimg">
+                   <img src="images/home_h.png">
+               </div>
+               <a href="#/pages/1_1">首页</a>
+           </div>
+           <div class="bottominfo activebottom">
+               <div class="bottomimg">
+                   <img src="images/mypro_w.png">
+               </div>
+               <a href="#/pages/2_1">我的项目</a>
+           </div>
+           <div class="bottominfo">
+               <div class="bottomimg">
+                   <img src="images/findpro_h.png">
+               </div>
+               <a href="#/pages/3_1">挑选项目</a>
+           </div>
+           <div class="bottominfo">
+               <div class="bottomimg">
+                   <img src="images/userinfo_h.png">
+               </div>
+               <a href="#/pages/8_1">账户设置</a>
+           </div>
+           </div>
+
+
+</body>
 </html>
