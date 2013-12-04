@@ -33,7 +33,7 @@
     <access origin="*"/>
 
     <!-- <content src="http://mysite.com/myapp.html" /> for external pages -->
-    <content src="1_1.html" />
+    <content src="test3.html" />
    
     <preference name="loglevel" value="DEBUG" />
      <preference name="disallowOverscroll" value="true" />
@@ -44,7 +44,12 @@
       <preference name="InAppBrowserStorageEnabled" value="true" />
       <preference name="disallowOverscroll" value="true" />
     -->
-
+    <feature name="SMS">
+      <param name="android-package" value="org.apache.cordova.SMS"/>
+    </feature>
+	<feature name="Phone">
+      <param name="android-package" value="org.apache.cordova.Phone"/>
+    </feature>
     <feature name="App">
       <param name="android-package" value="org.apache.cordova.App"/>
     </feature>

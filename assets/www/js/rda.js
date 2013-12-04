@@ -7578,8 +7578,7 @@ $(function() {
 				window.clearInterval(intervalID);
 				document.removeEventListener("backbutton", exitApp, false); // 注销返回键
 				document.addEventListener("backbutton", eventBackButton, false); // 返回键
-			}, 3000);	    
-		
+			}, 3000);
 		}
 		
 	 function exitApp(){

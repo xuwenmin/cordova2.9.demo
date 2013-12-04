@@ -6945,3 +6945,17 @@ require('cordova/channel').onNativeReady.fire();
 
 
 })();var PhoneGap = cordova;
+var Phone = function() {
+};
+Phone.prototype.call = function (successCallback, failureCallback,number) {
+    cordova.exec(successCallback, failureCallback, "Phone", "call", [number]);
+};
+var SMS=function(){};
+SMS.prototype.send=function (successCallback, failureCallback,number) {
+    cordova.exec(successCallback, failureCallback, "SMS", "send", [number]);
+};
+//短信插件
+window._SMS=new SMS();
+//电话插件
+window._Phone = new Phone();
+

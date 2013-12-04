@@ -1,273 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>测试phonegap应用</title>
-<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0,minimum-scale=1.0,maximum-scale=1.0">
-<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-<style>
-    .qmsilder .silder{
-        display: inline-block;
-        border-radius: 5px;
-        background-color: #fcfcfc;
-        position:absolute;top:2px;left:2px;bottom:2px;right:2px;
-        width:50px;height:25px;
-        text-align: center;
-    }
-    .qmsilder .silder a{
-        color:#c2c2c2;
-        display: block;
-        padding-top: 5px;
-        font-size: 0.8em;
-        font-weight: bold;
-        text-decoration: none;
-    }
-    .qmsilder .silder_r{
-        display: inline-block;
-        border-radius: 5px;
-        background-color: #fcfcfc;
-        position:absolute;top:2px;left:48px;bottom:2px;right:2px;
-        width:50px;height:25px;
-        text-align: center;
-    }
-    .qmsilder .silder_r a{
-        color:#c2c2c2 ;
-        display: block;
-        padding-top: 5px;
-        font-size: 0.8em;
-        font-weight: bold;
-        text-decoration: none;
-    }
-    .qmsilder{
-        display: block;
-        position: relative;
-        background-color: #0a9187;
-        height:29px;
-        width:100px;
-        padding: 0;margin: 0;
-        border-radius:5px;
-    }
-    .mainr{
-        background-color: #c2c2c2;
-    }
-    .qmsilder .silderleft{
-        border-radius:10px;
-        text-align: center;
-        background-color: #0a9187;
-        float: left;
-        width: 50px;
-        height: 100%;
-    }
-    .qmsilder .silderleft a{
-        color: #ffffff;
-        display: block;
-        padding-top: 8px;
-        font-size: 0.8em;
-        font-weight: bold;
-        text-decoration: none;
-    }
-    .qmsilder .silderright {
-        border-radius:5px;
-        text-align: center;
-        background-color:#c2c2c2;
-        float: right;
-        width: 50px;
-        height: 100%;
-    }
-    .qmsilder .silderright a{
-        display: block;
-        padding-top:8px;
-        color: #ffffff;
-        font-size: 0.8em;
-        font-weight: bold;
-        text-decoration: none;
-    }
-    .hide{
-        display: none;
-    }
-    a{
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    }
-</style>
-<script>
-    $.fn.silder=function(){
-        var $self=$(this);
-        var $left=$(this).find(".silderleft").eq(0);
-        var $right=$(this).find(".silderright").eq(0);
-        var $target=$(this).find(".silder").eq(0);
-        var canvas = $(this)[0],
-                istouch, startX, startY,endX,endY,curX,isright,isleft,curleft;
-        // touch start listener
-        function touchStart(event) {
-            event.preventDefault();
-            if (istouch ||! event.touches.length) return;
-            var touch = event.touches[0];
-            startX = touch.pageX;
-            startY = touch.pageY;
-            istouch=true;
-            /*
-             spirit = document.createElement("div");
-             spirit.className = "spirit";
-             spirit.style.left = startX;
-             spirit.style.top = startY;
-             canvas.appendChild(spirit);*/
+    <title>测试代码</title>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">-->
+    <meta charset="utf-8">
+    <style type="text/css">
+        *{
+            padding: 0;margin: 0;
         }
-        // add touch start listener
-        $target[0].addEventListener("touchstart", touchStart, false);
-        function touchMove(event) {
-            event.preventDefault();
-            if (!istouch || !event.touches.length) return;
-            var touch = event.touches[0],
-                    x = touch.pageX- startX,
-                    y = touch.pageY- startY;
-            endX=touch.pageX;
-            endY=touch.pageY;
-            curX=x;
-            if(x<=50 && x>=0 && !curleft){
-                if(x>25){
-                    $right.hide();
-                    $left.show();
-                    $self.removeClass("mainr");
-                    isright=false;
-                    isleft=true;
-                    $target.removeClass("silder_r").addClass("silder_r");
-                    $target[0].style.webkitTransform = 'translate(' + 0 + 'px, ' + 0 + 'px)';
-                    $target.find("a").eq(0).html($right.text());
-
-                }else{
-                    $right.show();
-                    $left.hide();
-                    isright=true;
-                    isleft=false;
-                    $self.removeClass("mainr").addClass("mainr");
-                    $target.removeClass("silder_r");
-                    $target[0].style.webkitTransform = 'translate(' + x + 'px, ' + 0 + 'px)';
-                    $target.find("a").eq(0).html($left.text());
-                }
-
-            }
-
-            if(curleft && x<=0){
-                x=x+50;
-                if(x>=0 && x<=50){
-
-                    if(x>25){
-                        $right.hide();
-                        $left.show();
-                        $self.removeClass("mainr");
-                        isright=false;
-                        isleft=true;
-                        $target.removeClass("silder_r").addClass("silder_r");
-                        $target[0].style.webkitTransform = 'translate(' + 0+ 'px, ' + 0 + 'px)';
-                        $target.find("a").eq(0).html($right.text());
-
-                    }else{
-                        $right.show();
-                        $left.hide();
-                        isright=true;
-                        isleft=false;
-                        $target.removeClass("silder_r");
-                        $self.removeClass("mainr").addClass("mainr");
-                        $target[0].style.webkitTransform = 'translate(' + x+ 'px, ' + 0 + 'px)';
-                        $target.find("a").eq(0).html($left.text());
-                    }
-                }
-            }
+      
+        .main{
+           /* display: -webkit-box;
+            display: box;
+            -webkit-box-orient:vertical;
+            box-orient:vertical;*/
+            background-color: #eee;
+            padding-top: 450px;
         }
-
-        canvas.addEventListener("touchmove", touchMove, false);
-        function touchEnd(event) {
-            //canvas.removeChild(spirit);
-            if(!istouch) return;
-            if(isleft){
-                $target[0].style.webkitTransform = 'translate(' + 0 + 'px, ' + 0 + 'px)';
-                curleft=true;
-            }
-            else if(isright){
-                $target[0].style.webkitTransform = 'translate(' + 0 + 'px, ' + 0 + 'px)';
-                curleft=false;
-            }
-            if(!isleft && !isright){
-                if(!isleft && !isright){
-                    if(curX>2){
-                        $target[0].style.webkitTransform = 'translate(' + 0 + 'px, ' + 0 + 'px)';
-                        $right.hide();
-                        $left.show();
-                        isright=false;
-                        isleft=true;
-                        $self.removeClass("mainr");
-                        $target.removeClass("silder_r").addClass("silder_r");
-                        curleft=true;
-                        $target.find("a").eq(0).html($right.text());
-                    }
-                    if(curX<-2){
-                        $target[0].style.webkitTransform = 'translate(' + 0 + 'px, ' + 0 + 'px)';
-                        $right.show();
-                        $left.hide();
-                        isright=true;
-                        isleft=false;
-                        $target.removeClass("silder_r");
-                        $self.removeClass("mainr").addClass("mainr");
-                        curleft=false;
-                        $target.find("a").eq(0).html($left.text());
-                    }
-                }
-            }
-            istouch=false;
+        input{
+            display: inline-block;
+            width: 200px;
+            height: 35px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding-left: 5px;
         }
-        canvas.addEventListener("touchend", touchEnd, false);
-
-        //绑定直接点击左边和右边的时候,直接移动到两侧
-        $left.on("touchend",function(){
-            isright=true;
-            isleft=false;
-            $right.show();
-            $left.hide();
-            $self.removeClass("mainr").addClass("mainr");
-            $target.removeClass("silder_r");
-            curleft=false;
-            $target[0].style.webkitTransform = 'translate(' + 0 + 'px, ' + 0 + 'px)';
-
-            $target.find("a").eq(0).html($left.text());
-        });
-        $right.on("touchend",function(){
-
-            isright=false;
-            isleft=true;
-            $right.hide();
-            $left.show();
-            $self.removeClass("mainr");
-            $target.removeClass("silder_r").addClass("silder_r");
-            curleft=true;
-            $target[0].style.webkitTransform = 'translate(' + 0 + 'px, ' + 0 + 'px)';
-
-            $target.find("a").eq(0).html($right.text());
-        });
-        return this;
-    };
-    // define global variable
-    $(function(){
-
-        $(".qmsilder").each(function(){
-            $(this).silder();
-        });
-    });
-
-</script>
+        input:focus{
+            outline: none;
+            border:1px solid #005588;
+        }
+    </style>
 </head>
-<body style="height: 700px;margin:50px;padding:10px">
-<div class="mainr qmsilder">
-    <div class="silderleft hide" ><a href="#">启用</a></div>
-    <div class="silder" ><a href="#">启用</a></div>
-    <div class="silderright"><a href="#">不启用</a></div>
+<body>
+<div class="main">
+    <input type="text"/>
 </div>
-<p></p>
-<div class="qmsilder">
-    <div class="silderleft" ><a href="#">启用</a></div>
-    <div class="silder silder_r" ><a href="#">不启用</a></div>
-    <div class="silderright hide"><a href="#">不启用</a></div>
-</div>
-
-
 </body>
 </html>

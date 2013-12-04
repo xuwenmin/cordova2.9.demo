@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+    <title>RDA实时信用管理系统</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/rda.css">
+    <link rel="stylesheet" href="css/rda_1.css">
+    <style type="text/css">
+            /*翻页动画效果*/
+        .translate-actionnext{
+            -webkit-animation:fadeInRightBigNext .3s 0s ease both;
+        }
+        .translate-actionpre{
+            -webkit-animation:fadeInRightBigPre .3s 0s ease both;
+        }
+        @-webkit-keyframes fadeInRightBigNext{
+            0%{opacity:0;
+                -webkit-transform:translateX(60px)}
+            100%{opacity:1;
+                -webkit-transform:translateX(0)}
+        }
+        @-webkit-keyframes fadeInRightBigPre{
+            0%{opacity:0;
+                -webkit-transform:translateX(-60px)}
+            100%{opacity:1;
+                -webkit-transform:translateX(0)}
+        }
+
+    </style>
+</head>
+<body>
+<div class="_wrapper">
+    <div class="main1">
+        <div  class="wrapper deviceselction gopre">
+        </div>
+        <div  class="wrapper deviceselction gonext">
+        </div>
+    </div>
+</div>
+
+<div class="load" id="loaddiv">
+    <img src="images/loading.png" alt="">
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/extend/offset.js"></script>
+<script src="js/extend/position.js"></script>
+<script src="js/underscore.min.js"></script>
+<script src="js/doT.min.js"></script>
+<script type="text/javascript" src="js/ichart.1.2.min.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script type="text/javascript" src="js/base.js"></script>
+</body>
+</html>
